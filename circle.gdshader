@@ -20,12 +20,20 @@ uniform float frequency : hint_range(0, 100) = 1.0;
 uniform float time_scale : hint_range(0, 100) = 1.0;
 
 void vertex() {
+    vec2 center = vec2(0.5,0.5);
+    vec2 dir = VERTEX - center;
+    
+    // Calculate the angle in radians using atan2.
+    float an = atan(dir.y, dir.x);
+    
     // Calculate the displacement based on time
     float time = TIME * time_scale;
-    float displacement = sin(time *  frequency) * amplitude;
+    float angle_ratio = an/(2.*PI);
+    float k = 25.*6.;
+    float displacement = amplitude * sin(time + k*angle_ratio) ;
     
-    vec2 dirToCenter = normalize(VERTEX - vec2(0.5,0.5)); 
-
+    vec2 dirToCenter = normalize(VERTEX - center); 
+    
     // Apply the displacement to the vertex position
     VERTEX += displacement*dirToCenter;
 }
