@@ -1,0 +1,7 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1697133968
+circle.png::CompressedTexture2D::7760582576507513868::1697133968::1697133971::1::::<><>::
+icon.svg::CompressedTexture2D::3891199080882227975::1697131030::1697131035::1::::<><>::
+circle.gd::GDScript::-1::1697133631::0::1::::<>MeshInstance2D<>::
+circle.gdshader::Shader::-1::1697133533::0::1::::<><>::
+root.tscn::PackedScene::1462658094170710863::1697133533::0::1::::<><>::res://circle.gdshader<>res://circle.gd
